@@ -47,9 +47,13 @@ userButton.addEventListener('click', userInput);
 //button evt listner func
 function userInput (){
     const userGridNum = parseInt(prompt('Pick a number ?, '));
+    if (userGridNum <= 100){
     gridDivs.length = 0;
     gridContainer.innerHTML = '';
     createDivs(userGridNum);
+} else{
+    alert ('Please enter a number from 1 to 100.');
+}
 }
 
 
@@ -72,7 +76,7 @@ const g = () => Math.floor(Math.random() * 257);
 function b () {
     return  Math.floor(Math.random() * 257);
  }
-console.log(g());
+
 //append  userButton to buttonDiv
 buttonDiv.appendChild(userButton);
 
